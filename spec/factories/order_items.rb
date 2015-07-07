@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :order_item do
-    price "9.99"
-quantity 1
+    price {Faker::Number.decimal 3}
+    quantity {Faker::Number.digit}
   end
 
 end
