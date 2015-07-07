@@ -22,5 +22,23 @@ RSpec.describe Order, type: :model do
   it{ expect(order).to belong_to(:credit_card) }
   it{ expect(order).to belong_to(:billing_address) }
   it{ expect(order).to belong_to(:shipping_address) }
-  it{ expect(order).to belong_to(:orders) }
+  it{ expect(order).to have_many(:orders) }
+  
+  describe "#add_book" do
+    let(:book) { FactoryGirl::create :book }
+    
+    it "" do
+      
+    end
+    
+  end
+  
+  describe "#total" do
+    
+    it "" do
+      
+    end
+    
+  end
+  
 end
