@@ -14,12 +14,31 @@ RSpec.describe Order, type: :model do
   it{ expect(order).to have_db_index(:customer_id)}
   it{ expect(order).to have_db_index(:credit_card_id)}
 
-#  xit{ expect(order).to validate_presence_of(:) }  
-#  xit{ expect(order).to validate_presence_of(:) }  
-#  xit{ expect(order).to validate_presence_of(:) }
+  it{ expect(order).to validate_presence_of(:total_price) }  
+  it{ expect(order).to validate_presence_of(:completed_date) }  
+  it{ expect(order).to validate_presence_of(:state) }
 
   it{ expect(order).to belong_to(:customer) }
   it{ expect(order).to belong_to(:credit_card) }
   it{ expect(order).to belong_to(:billing_address) }
   it{ expect(order).to belong_to(:shipping_address) }
+  it{ expect(order).to have_many(:order_items) }
+  
+  describe "#add_book" do
+    let(:book) { FactoryGirl::create :book }
+    
+    it "" do
+      
+    end
+    
+  end
+  
+  describe "#total" do
+    
+    it "" do
+      
+    end
+    
+  end
+  
 end

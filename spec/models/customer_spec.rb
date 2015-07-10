@@ -16,4 +16,24 @@ RSpec.describe Customer, type: :model do
 
   it{ expect(customer).to have_many(:ratings) }
   it{ expect(customer).to have_many(:orders) }
+  
+  describe "#new_order" do
+    let(:order) { FactoryGirl::create :order }
+    
+    it "" do
+      
+    end
+    
+  end
+  
+  describe "#current_order" do
+    let(:order) { FactoryGirl::create :order }
+    
+    it "" do
+      
+    end
+    
+  end
+  
+  
 end

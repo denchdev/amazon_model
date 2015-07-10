@@ -29,5 +29,5 @@ RSpec.describe CreditCard, type: :model do
   it{ expect(credit_card).to allow_value(:expiration_year)}
 
   it{ expect(credit_card).to belong_to(:customer) }
-  it{ expect(credit_card).to have_many(:order) }
+  it{ expect(credit_card).to have_many(:orders) }
 end
